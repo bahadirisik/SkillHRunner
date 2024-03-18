@@ -10,6 +10,7 @@ public class GameMaster : MonoBehaviour
 	public event Action<int> OnCoinTake;
 	public event Action<int> OnLevelCompleted;
 	public event Action<int> OnLevelFailed;
+	public event Action<int> OnLevelPaused;
 
 	public bool IsGameOn { get; private set; }
 
@@ -29,7 +30,15 @@ public class GameMaster : MonoBehaviour
 
 	private void Start()
 	{
-		IsGameOn = true;
+		IsGameOn = false;
+	}
+
+	private void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+		{
+			ToggleStopGame();
+		}
 	}
 
 	public void CoinTake(int amount)
@@ -54,5 +63,16 @@ public class GameMaster : MonoBehaviour
 	private void SetGameOn(bool value)
 	{
 		IsGameOn = value;
+	}
+
+	public void StartTheGame()
+	{
+		SetGameOn(true);
+	}
+
+	public void ToggleStopGame()
+	{
+		OnLevelPaused?.Invoke(currentCoin);
+		SetGameOn(IsGameOn ? false : true);
 	}
 }

@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		GameMaster.Instance.OnLevelCompleted += ResetVelocity;
 		GameMaster.Instance.OnLevelFailed += ResetVelocity;
+		GameMaster.Instance.OnLevelPaused += ResetVelocity;
 	}
 
 	private void FixedUpdate()
