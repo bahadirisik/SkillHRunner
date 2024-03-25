@@ -26,6 +26,7 @@ public class CharacterMovement : MonoBehaviour, IDamageable
 	#endregion
 
 	#region Health
+	public event Action<int> OnTakeDamage;
 	public int Health { get; set; } = 100;
 	[field : SerializeField]public int CurrentHealth { get; set; }
 	#endregion
@@ -101,6 +102,7 @@ public class CharacterMovement : MonoBehaviour, IDamageable
 	public void DecreaseHealth(int amount)
 	{
 		CurrentHealth -= amount;
+		OnTakeDamage?.Invoke(CurrentHealth);
 	}
 
 	public void Die()
