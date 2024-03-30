@@ -38,6 +38,16 @@ public class PlayerMovement : MonoBehaviour
 
 			MoveRightLeft(1);
 		}
+
+		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+		{
+			Crouch(2f, 1f, true);
+		}
+
+		if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+		{
+			Crouch(7f, 3.5f, false);
+		}
 	}
 
 	private void SubscribeEvents()
@@ -72,5 +82,12 @@ public class PlayerMovement : MonoBehaviour
 	private void ResetVelocity(int value)
 	{
 		rb.velocity = Vector3.zero;
+	}
+
+	private void Crouch(float sizeY, float centerY, bool isCrouching)
+	{
+		GetComponentInChildren<Animator>().SetBool("Crouch", isCrouching);
+		GetComponentInChildren<BoxCollider>().size = new Vector3(3f, sizeY, 3f);
+		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, centerY, 0.6f);
 	}
 }

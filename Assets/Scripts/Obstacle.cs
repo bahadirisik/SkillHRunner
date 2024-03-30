@@ -12,6 +12,7 @@ public class Obstacle : MonoBehaviour, IIntreactable
 
 		GameMaster.Instance.LevelFailed();
 
-		player.gameObject.SetActive(false);
+		//player.gameObject.SetActive(false);
+		player.GetComponentInChildren<Animator>().SetTrigger("Die");
 	}
 }

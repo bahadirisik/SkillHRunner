@@ -11,5 +11,7 @@ public class LevelEnd : MonoBehaviour, IIntreactable
 		Destroy(levelEndEffectGO, 2f);
 
 		GameMaster.Instance.LevelCompleted();
+
+		player.GetComponentInChildren<Animator>().SetTrigger("Victory");
 	}
 }
