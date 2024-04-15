@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : MonoBehaviour, IIntreactable
+public class Shield : CollectableBoosts
 {
-	public void Intreact(Transform player)
+	public override void Intreact(Transform player)
 	{
-		player.GetComponent<PlayerBoost>().IsShieldActive = true;
+		base.Intreact(player);
+		player.GetComponent<PlayerBoost>().ToggleShield(true);
 		gameObject.SetActive(false);
 	}
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4692216147777462147}
   - component: {fileID: 1509131745162527975}
   - component: {fileID: 2652501686556183463}
+  - component: {fileID: 3771551224000847627}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -75,3 +76,18 @@ MonoBehaviour:
   winningScoreText: {fileID: 0}
   levelFailedPanel: {fileID: 0}
   failScoreText: {fileID: 0}
+  levelPausedPanel: {fileID: 0}
+--- !u!114 &3771551224000847627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465310845175013553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cdc2dd3b179d045bd80597c07f5b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnetIconImage: {fileID: 0}
+  shieldIconImage: {fileID: 0}

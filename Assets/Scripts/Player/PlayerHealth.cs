@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if (playerBoost.IsShieldActive)
 		{
-			playerBoost.IsShieldActive = false;
+			playerBoost.ToggleShield(false);
 			return;
 		}
 

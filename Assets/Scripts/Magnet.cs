@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Magnet : MonoBehaviour, IIntreactable
+public class Magnet : CollectableBoosts
 {
-	public void Intreact(Transform player)
+	public override void Intreact(Transform player)
 	{
-		player.GetComponent<PlayerBoost>().IsMagnetActive = true;
+		base.Intreact(player);
+		player.GetComponent<PlayerBoost>().ToggleMagnet(true);
 		gameObject.SetActive(false);
 	}
 }
