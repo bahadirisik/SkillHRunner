@@ -72,6 +72,22 @@ public class PlayerMovement : MonoBehaviour
 		rb.velocity = currentVelocity;
 	}
 
+	public void MoveRight()
+	{
+		if (pathIndex >= pathChild.childCount - 1)
+			return;
+
+		MoveRightLeft(1);
+	}
+
+	public void MoveLeft()
+	{
+		if (pathIndex <= 0)
+			return;
+
+		MoveRightLeft(-1);
+	}
+
 	void MoveRightLeft(int pathIndexValue)
 	{
 		pathIndex += pathIndexValue;
@@ -89,5 +105,23 @@ public class PlayerMovement : MonoBehaviour
 		GetComponentInChildren<Animator>().SetBool("Crouch", isCrouching);
 		GetComponentInChildren<BoxCollider>().size = new Vector3(3f, sizeY, 3f);
 		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, centerY, 0.6f);
+	}
+
+	public void CrouchWithTimer()
+	{
+		StartCoroutine(CrouchTimer());
+	}
+
+	private IEnumerator CrouchTimer()
+	{
+		GetComponentInChildren<Animator>().SetBool("Crouch", true);
+		GetComponentInChildren<BoxCollider>().size = new Vector3(3f, 2f, 3f);
+		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, 1f, 0.6f);
+
+		yield return new WaitForSeconds(1f);
+
+		GetComponentInChildren<Animator>().SetBool("Crouch", false);
+		GetComponentInChildren<BoxCollider>().size = new Vector3(3f, 7f, 3f);
+		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, 3.5f, 0.6f);
 	}
 }
