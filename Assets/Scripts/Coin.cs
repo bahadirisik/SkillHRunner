@@ -18,6 +18,8 @@ public class Coin : MonoBehaviour, IIntreactable
 	
 	public void Intreact(Transform player)
 	{
+		AudioManager.Instance.Play("Coin");
+
 		GameObject effect = Instantiate(GameAssets.ins.coinPickUpEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 3f);
 		GameMaster.Instance.CoinTake(coinAmount);

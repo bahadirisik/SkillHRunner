@@ -8,6 +8,7 @@ public class PlayerBoostsUI : MonoBehaviour
     [SerializeField] private Image magnetIconImage;
     [SerializeField] private Image shieldIconImage;
 
+
 	private void Start()
 	{
 		SubEvents();
@@ -15,8 +16,8 @@ public class PlayerBoostsUI : MonoBehaviour
 
 	private void SubEvents()
 	{
-		PlayerBoost.OnMagnetCollect += Magnet_OnMagnetCollect;
-		PlayerBoost.OnShieldCollect += Shield_OnShieldCollect;
+		PlayerBoost.Instance.OnMagnetCollect += Magnet_OnMagnetCollect;
+		PlayerBoost.Instance.OnShieldCollect += Shield_OnShieldCollect;
 	}
 
 	private void Shield_OnShieldCollect(bool value)

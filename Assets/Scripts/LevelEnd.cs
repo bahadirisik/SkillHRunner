@@ -12,6 +12,6 @@ public class LevelEnd : MonoBehaviour, IIntreactable
 
 		GameMaster.Instance.LevelCompleted();
 
-		player.GetComponentInChildren<Animator>().SetTrigger("Victory");
+		//player.GetComponentInChildren<Animator>().SetTrigger("Victory");
 	}
 }

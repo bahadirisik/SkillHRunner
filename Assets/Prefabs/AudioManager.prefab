@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8557857969258921823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5941608220780509508}
+  - component: {fileID: 609045037833081834}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5941608220780509508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557857969258921823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &609045037833081834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557857969258921823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8cf9c5516c2994795531c67ab5944a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: 58234b5fc1dcdcb4297da8bfd36776f9, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 1
+    group: {fileID: 0}
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: d2f372c8e6316d349b2ca0cebfcdcf86, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    group: {fileID: 0}
+    source: {fileID: 0}
+  - name: Winning
+    clip: {fileID: 8300000, guid: 0a25f3b0a7de58849893c52578f9d4ca, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    group: {fileID: 0}
+    source: {fileID: 0}
+  - name: Fail
+    clip: {fileID: 8300000, guid: 7376b813626ee1f4b98a6c4d354ab487, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    group: {fileID: 0}
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 7548bd487bf2d544db58e396a2495024, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    group: {fileID: 0}
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: 4963b0e1d84d02b43a3dfc670eb2a4ed, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    group: {fileID: 0}
+    source: {fileID: 0}
+  - name: Boost
+    clip: {fileID: 8300000, guid: c3b7959c9996b2044868bf22ac2219a2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    group: {fileID: 0}
+    source: {fileID: 0}

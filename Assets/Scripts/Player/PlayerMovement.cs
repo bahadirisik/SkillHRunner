@@ -115,13 +115,13 @@ public class PlayerMovement : MonoBehaviour
 	private IEnumerator CrouchTimer()
 	{
 		GetComponentInChildren<Animator>().SetBool("Crouch", true);
-		GetComponentInChildren<BoxCollider>().size = new Vector3(3f, 2f, 3f);
-		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, 1f, 0.6f);
+		GetComponentInChildren<BoxCollider>().size = new Vector3(6f, 2f, 3f);
+		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, 2f, 0.6f);
 
 		yield return new WaitForSeconds(1f);
 
 		GetComponentInChildren<Animator>().SetBool("Crouch", false);
-		GetComponentInChildren<BoxCollider>().size = new Vector3(3f, 7f, 3f);
-		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, 3.5f, 0.6f);
+		GetComponentInChildren<BoxCollider>().size = new Vector3(4.5f, 4.5f, 3f);
+		GetComponentInChildren<BoxCollider>().center = new Vector3(0f, 2.8f, 0.6f);
 	}
 }

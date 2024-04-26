@@ -50,12 +50,14 @@ public class GameMaster : MonoBehaviour
 
 	public void LevelCompleted()
 	{
+		AudioManager.Instance.Play("Winning");
 		SetGameOn(false);
 		OnLevelCompleted?.Invoke(currentCoin);
 	}
 
 	public void LevelFailed()
 	{
+		AudioManager.Instance.Play("Fail");
 		SetGameOn(false);
 		OnLevelFailed?.Invoke(currentCoin);
 	}

@@ -7,6 +7,8 @@ public class Obstacle : MonoBehaviour, IIntreactable
 	[SerializeField] private int damage;
 	public void Intreact(Transform player)
 	{
+		AudioManager.Instance.Play("Hit");
+
 		GameObject effect = Instantiate(GameAssets.ins.collisionEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 3f);
 		gameObject.SetActive(false);

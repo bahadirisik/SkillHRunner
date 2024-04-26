@@ -5,14 +5,29 @@ using UnityEngine;
 
 public class PlayerBoost : MonoBehaviour
 {
-	public static event Action<bool> OnMagnetCollect;
-	public static event Action<bool> OnShieldCollect;
+	public static PlayerBoost Instance;
+
+	public event Action<bool> OnMagnetCollect;
+	public event Action<bool> OnShieldCollect;
 
 	public bool IsMagnetActive { get; private set; }
 	public bool IsShieldActive { get; private set; }
 
 	private float magnetStartTimer = 3f;
 	private float magnetCurrentTimer;
+
+	private void Awake()
+	{
+		if (Instance == null)
+		{
+			Instance = this;
+		}
+		else
+		{
+			Destroy(gameObject);
+			return;
+		}
+	}
 
 	private void Start()
 	{

@@ -50,6 +50,8 @@ public class PlayerHealth : MonoBehaviour
 
 		GameMaster.Instance.LevelFailed();
 
-		GetComponentInChildren<Animator>().SetTrigger("Die");
+		gameObject.SetActive(false);
+
+		//GetComponentInChildren<Animator>().SetTrigger("Die");
 	}
 }
