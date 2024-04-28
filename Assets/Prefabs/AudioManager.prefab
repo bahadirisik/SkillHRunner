@@ -61,14 +61,14 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Winning
     clip: {fileID: 8300000, guid: 0a25f3b0a7de58849893c52578f9d4ca, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 0
     group: {fileID: 0}
     source: {fileID: 0}
   - name: Fail
     clip: {fileID: 8300000, guid: 7376b813626ee1f4b98a6c4d354ab487, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 0
     group: {fileID: 0}
@@ -82,14 +82,14 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 4963b0e1d84d02b43a3dfc670eb2a4ed, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 0
     group: {fileID: 0}
     source: {fileID: 0}
   - name: Boost
     clip: {fileID: 8300000, guid: c3b7959c9996b2044868bf22ac2219a2, type: 3}
-    volume: 1
+    volume: 0.9
     pitch: 1
     loop: 0
     group: {fileID: 0}
